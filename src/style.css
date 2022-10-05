@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+/* light mode and dark mode */
+
+:root{
+    --nav-background: white;
+    --background: white;
+    --text-color: rgb(32,31,29);
+    --box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    --input-color: rgb(240,240,240);
+    --link-active: orangered;
+    --footer-color: rgb(240,240,240);
+    --btn-background: rgb(32,31,29);
+    --btn-text: white;
+    
+}
+[data-theme='dark']{
+    --nav-background: rgb(32,31,29);
+    --background: rgb(30, 150, 243);
+    --text-color: rgb(30,150,243);
+    --box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    --input-color: rgb(32,31,29);
+    --link-active: orangered;
+    --footer-color: rgb(32,31,29);
+    --btn-background: rgb(0, 91, 161);
+    --btn-text: rgb(32,31,29);
+    
+    
+}
