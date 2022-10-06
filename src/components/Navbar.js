@@ -6,6 +6,9 @@ import { BsFillSunFill } from "react-icons/bs";
 import { useContext } from "react";
 import { ThemeContext } from "../context/Theme-context";
 import { GiCrossMark, GiHamburgerMenu } from "react-icons/gi";
+// importing pictures
+import navLogo from "../image/logo-white.png"
+import navLogoDark from "../image/logo-dark.png"
 
 
 
@@ -25,7 +28,7 @@ export default function Navbar(){
     const{onThemeToggle} = useContext(ThemeContext)
 
     const icon = theme === 'light' ? <FaMoon className="moon" /> : <BsFillSunFill className="sun" />
-    const newImage = theme === 'light' ? "./portfolio/image/logo-white.png" : "./portfolio/image/logo-dark.png"
+    const newImage = theme === 'light' ? navLogo : navLogoDark
 
    
 

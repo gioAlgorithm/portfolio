@@ -3,6 +3,10 @@ import { ThemeContext } from "../context/Theme-context"
 import "./page-style.css"
 import { Component } from "react";
 import Slider from "react-slick";
+// importing pictures
+import projectImgCharacter from "../image/fictional-character.png"
+import emptyForNow from "../image/empty-for-now.png"
+import emptyForNowDark from "../image/empty-for-now-dark.png"
 
 
 
@@ -39,7 +43,7 @@ export default function Work(){
               </div>
     
               <div className="slider-project">
-                <img src="./portfolio/image/fictional-character.png" alt="project" className="project-img"  />
+                <img src={projectImgCharacter} alt="project" className="project-img"  />
               </div>
     
               <div className="slider-project">
@@ -53,7 +57,7 @@ export default function Work(){
   }
     
     const {theme} = useContext(ThemeContext)
-    const projectImage = theme ==='light' ? "./portfolio/image/empty-for-now.png" : "./portfolio/image/empty-for-now-dark.png"
+    const projectImage = theme ==='light' ? emptyForNow : emptyForNowDark
     
     return(
         <div className="work-container" data-theme={theme}>

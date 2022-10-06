@@ -1,11 +1,14 @@
-import React, { useContext } from "react"
+import React, { useContext} from "react"
 import { ThemeContext } from "../context/Theme-context"
 import "./page-style.css"
-import Typical from "react-typical"
+import Typewriter from "typewriter-effect"
+// importing pictures
+import laptopImg from "../image/about.png"
+import laptopImgDark from "../image/about-dark.png"
 
 export default function About(){
     const {theme} = useContext(ThemeContext)
-    const aboutImage = theme ==='light' ? "./portfolio/image/about.png" : "./portfolio/image/about-dark.png"
+    const aboutImage = theme ==='light' ? laptopImg : laptopImgDark
 
     return(
         <div className="about-container" data-theme={theme}>
@@ -15,28 +18,26 @@ export default function About(){
                 <div className="about-content" >
                     <img alt="coding" src={aboutImage}/>
                     <div className="about-text-content">
-                            <span>
-                                <h1>ABOUT</h1>
-                                {" "}  
-                                <h1>
-                                        <Typical 
+                        <h1>
+                            About
+                        </h1>
+                        <h1 className="typer">
+                        <Typewriter
+                            options={{
+                                autoStart: true,
+                                loop:true,
+                                delay: 80,
+                                strings:[
+                                    "Me",
+                                    "Developer",
+                                    "Youtuber",
 
-                                            loop={Infinity}
-                                            wrapper="b"
-                                            steps={
-                                                [   "ME",
-                                                    3000,
-                                                    "DEVELOPER",
-                                                    3000,
-                                                    "YOUTUBER",
-                                                    3000,
-                                                    
-                                                ]
-                                            }
-
-                                    />
-                                </h1>
-                            </span>
+                                ]
+                                      
+                            }}
+                        />
+                        </h1>
+                        
                             <p>
                                 I'm front-end developer located in Georgia.
                                 I do not have direct experience in the field, i.e. working for various companies, 

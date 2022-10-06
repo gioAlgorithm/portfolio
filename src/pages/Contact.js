@@ -5,6 +5,9 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdMail } from "react-icons/md"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+// importing pictures
+import successImg from "../image/success-white.png"
+import successImgDark from "../image/success-dark.png"
 
 export default function Contact(){
     const {theme} = useContext(ThemeContext)
@@ -24,7 +27,7 @@ export default function Contact(){
         setIsSubmitted(true);
   };
 
-    const newSuccess = theme ==='light' ? "./portfolio/image/success-white.png" : "./portfolio/image/success-dark.png"
+    const newSuccess = theme ==='light' ? successImg : successImgDark
 
     const [isSubmitted, setIsSubmitted] = useState(false)
 
