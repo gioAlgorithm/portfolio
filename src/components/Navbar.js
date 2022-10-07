@@ -37,19 +37,19 @@ export default function Navbar(){
             <Link to="/"><img alt="logo" src={newImage} height="50px"/></Link> 
                 <nav  ref={navRef}>
                     
-                    <NavLink  to="/"
+                    <NavLink  to="/" onClick={hideNavbar}
                         className={({isActive})=>(
                             isActive ? 'nav-link-active' : 'nav-link'
                         )}
                     end>Work</NavLink>
 
-                    <NavLink  to="/about"
+                    <NavLink  to="/about" onClick={hideNavbar}
                         className={({isActive})=>(
                             isActive ? 'nav-link-active' : 'nav-link'
                         )}
                     >About</NavLink>
 
-                    <NavLink  to="/contact"
+                    <NavLink  to="/contact" onClick={hideNavbar}
                         className={({isActive})=>(
                             isActive ? 'nav-link-active' : 'nav-link'
                         )}
