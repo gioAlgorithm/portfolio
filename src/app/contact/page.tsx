@@ -6,6 +6,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdMail } from "react-icons/md"
 import newSuccess from "../../../public/assets/image/success-white.png"
 import { metadata } from './metaData';
+import Image from 'next/image';
 
 
 export default function Contact() {
@@ -66,7 +67,7 @@ export default function Contact() {
                 </div>
             </form>
           }
-          {isSubmitted && <img alt="success" src={newSuccess.src} className={style.success} />}
+          {isSubmitted && <Image alt="success" width={600} height={600} src={newSuccess.src} className={style.success} />}
         </div>
       </div>
     </div>

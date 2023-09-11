@@ -16,6 +16,7 @@ import htmlImage from "../../../public/assets/svg/html.png"
 import JsImage from "../../../public/assets/svg/js.png"
 import NextImage from "../../../public/assets/svg/nextjs.png"
 import TypescriptImage from "../../../public/assets/svg/typescript.png"
+import Image from 'next/image';
 
 
 export default function Work() {
@@ -43,7 +44,7 @@ export default function Work() {
       <div className={style.firstProject}>
         <a href='https://giorgimachitadze-evsp.netlify.app/' className={style.innerFirstProject}>
           <div className={style.projectImage} >       
-            <img alt='project image' src={evspImage.src} />
+            <Image alt='project image' width={600} height={200} src={evspImage.src} />
           </div>
           <div className={style.projectInfo}>
             <div>
@@ -51,9 +52,9 @@ export default function Work() {
                 
                 <h2 className={style.projectTitle}>Entertainment VS Productivity <BsArrowRightShort /></h2>
                 <p>
-                  "Entertainment vs. Productivity" is a web app that helps you balance work and leisure. It has three elements: 
-                  Productivity, Entertainment, and Balance. Click "Productivity" to start a timer for work, then "Submit" to record time. 
-                  "Entertainment" offers breaks. "Balance" suggests switching based on your activity, ensuring a harmonious routine.
+                  &quot;Entertainment vs. Productivity&quot; is a web app that helps you balance work and leisure. It has three elements: 
+                  Productivity, Entertainment, and Balance. Click &quot;Productivity&quot; to start a timer for work, then &quot;Submit&quot; to record time. 
+                  &quot;Entertainment&quot; offers breaks. &quot;Balance&quot; suggests switching based on your activity, ensuring a harmonious routine.
                 </p>
               </div>
               <div className={style.projectTools}>
@@ -81,7 +82,7 @@ export default function Work() {
       <div className={style.secondProject}>
         <a href='https://giorgimachitadze-scarymaze.netlify.app/' className={style.innerSecondProject}>
           <div className={style.projectImage} >       
-            <img alt='project image' src={scaryMazeImage.src} />
+            <Image alt='project image' width={600} height={200} src={scaryMazeImage.src} />
           </div>
           <div className={style.projectInfo}>
             <div>
@@ -113,7 +114,7 @@ export default function Work() {
       <div className={style.thirdProject}>
         <a href='https://giorgimachitadze-world.netlify.app/' className={style.innerThirdProject}>
           <div className={style.projectImage} >       
-            <img alt='project image' src={worldImage.src} />
+            <Image alt='project image' width={600} height={200} src={worldImage.src} />
           </div>
           <div className={style.projectInfo}>
             <div>

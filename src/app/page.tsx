@@ -40,7 +40,7 @@ export default function About() {
             />
           </h1>
           <p>
-            Hello, I'm a passionate front-end web developer located in Georgia. My love for web development fuels my daily drive to create a multitude of websites,
+            Hello, I&apos;m a passionate front-end web developer located in Georgia. My love for web development fuels my daily drive to create a multitude of websites,
             allowing me to continuously expand my knowledge and refine my skills. My journey in this dynamic field has been a thrilling exploration of creativity and problem-solving. 
             With each project I take on, I embrace the opportunity to push my boundaries and stay at the forefront of the ever-evolving web development landscape. This commitment to growth
             keeps me enthusiastic and committed to delivering top-notch web experiences to clients and users alike.

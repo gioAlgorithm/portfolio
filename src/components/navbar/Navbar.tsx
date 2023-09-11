@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState, useRef, useEffect } from "react"
+import Image from "next/image"
 
 export default function Navbar() {
   const router = usePathname();
@@ -40,7 +41,7 @@ export default function Navbar() {
     <div className={style.navbar}>
 
       <div>
-        <Link href="/"><img src={logo.src} height={50} alt="logo" /></Link>
+        <Link href="/"><Image src={logo.src} width={450} height={100} alt="logo" /></Link>
       </div>
 
       <div className={style.navigation}>
