@@ -112,7 +112,7 @@ export default function Work() {
       </div>
 
       <div className={style.thirdProject}>
-        <a href='https://giorgimachitadze-world.netlify.app/' className={style.innerThirdProject}>
+        <a href='https://giorgimachitadze-world.vercel.app/' className={style.innerThirdProject}>
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={worldImage.src} />
           </div>
