@@ -80,7 +80,7 @@ export default function Work() {
       </div>
 
       <div className={style.secondProject}>
-        <a href='https://giorgimachitadze-scarymaze.netlify.app/' className={style.innerSecondProject}>
+        <a href='https://giorgimachitadze-scarymaze.vercel.app/' className={style.innerSecondProject}>
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={scaryMazeImage.src} />
           </div>
@@ -99,11 +99,14 @@ export default function Work() {
                 <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
                   <h1>React.js</h1>
                 </div>
-                <div style={{ backgroundImage: `url(${JsImage.src})` }}>
-                  <h1>Javascript</h1>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+                  <h1>Next.js</h1>
                 </div>
                 <div style={{ backgroundImage: `url(${SassImage.src})` }}>
-                  <h1>Firebase</h1>
+                  <h1>Sass</h1>
                 </div>
               </div>
             </div>
@@ -122,9 +125,9 @@ export default function Work() {
                 
                 <h2 className={style.projectTitle}>World <BsArrowRightShort /></h2>
                 <p>
-                Explore a dynamic GraphQL API for comprehensive country data. Effortlessly search and filter countries by starting letters, simplifying data retrieval. 
-                Get insights into population, area, languages, and currencies for countries worldwide. 
-                Discover an efficient way to access country information with this user-friendly tool.
+                  Explore a dynamic GraphQL API for comprehensive country data. Effortlessly search and filter countries by starting letters, simplifying data retrieval. 
+                  Get insights into population, area, languages, and currencies for countries worldwide. 
+                  Discover an efficient way to access country information with this user-friendly tool.
                 </p>
               </div>
               <div className={style.projectTools}>
