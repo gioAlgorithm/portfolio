@@ -42,7 +42,7 @@ export default function Work() {
       </div>
 
       <div className={style.firstProject}>
-        <a href='https://giorgimachitadze-evsp.netlify.app/' className={style.innerFirstProject}>
+        <a href='https://giorgimachitadze-evsp.vercel.app/' className={style.innerFirstProject}>
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={evspImage.src} />
           </div>
@@ -58,9 +58,6 @@ export default function Work() {
                 </p>
               </div>
               <div className={style.projectTools}>
-                <div style={{ backgroundImage: `url(${htmlImage.src})` }}>
-                  <h1>HTML</h1>
-                </div>
                 <div style={{ backgroundImage: `url(${CssImage.src})` }}>
                   <h1>CSS</h1>
                 </div>
