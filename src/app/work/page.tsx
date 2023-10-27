@@ -7,7 +7,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import evspImage from "../../../public/assets/image/evsp.png"
 import scaryMazeImage from "../../../public/assets/image/scary-maze.png"
 import worldImage from "../../../public/assets/image/world-website.png"
-import ecommerceImg from "../../../public/assets/image/ecommerce.png"
+
 import CssImage from "../../../public/assets/svg/css.png"
 import ReactImage from "../../../public/assets/svg/react.png"
 import SassImage from "../../../public/assets/svg/sass.png"
@@ -153,7 +153,6 @@ export default function Work() {
       <div className={style.fourthProject}>
         <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFourthProject}>
           <div className={style.projectImage} >       
-            <Image alt='project image' width={600} height={200} src={ecommerceImg.src} />
           </div>
           <div className={style.projectInfo}>
             <div>
