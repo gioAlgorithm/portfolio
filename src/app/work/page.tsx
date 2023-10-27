@@ -7,6 +7,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import evspImage from "../../../public/assets/image/evsp.png"
 import scaryMazeImage from "../../../public/assets/image/scary-maze.png"
 import worldImage from "../../../public/assets/image/world-website.png"
+import ecommerceImage from "../../../public/assets/image/ecommerce.png"
 import CssImage from "../../../public/assets/svg/css.png"
 import ReactImage from "../../../public/assets/svg/react.png"
 import SassImage from "../../../public/assets/svg/sass.png"
@@ -142,6 +143,40 @@ export default function Work() {
                 </div>
                 <div style={{ backgroundImage: `url(${GraphqlImage.src})` }}>
                   <h1>GraphQL</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className={style.fourthProject}>
+        <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFourthProject}>
+          <div className={style.projectImage} >       
+            <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />
+          </div>
+          <div className={style.projectInfo}>
+            <div>
+              <div className={style.projectAbout}>
+                
+                <h2 className={style.projectTitle}>Ecommerce <BsArrowRightShort /></h2>
+                <p>
+                  I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. 
+                  The site includes a search bar, a shopping cart, and a cart page, showcasing my skills in web development.
+                </p>
+              </div>
+              <div className={style.projectTools}>
+                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+                  <h1>Next.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+                  <h1>Sass</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
+                  <h1>React.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
                 </div>
               </div>
             </div>
