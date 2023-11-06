@@ -19,11 +19,29 @@ import yarnImage from "../../public/assets/svg/yarn.png"
 import npmImage from "../../public/assets/svg/npm.png"
 
 export default function About() {
+  // changing metadata title
   useEffect(() => {
     if (metadata.title) {
       document.title = String(metadata.title)
     }
   }, []);
+
+  // animation
+  useEffect(() => {
+    const cards = document.querySelectorAll(`.${style.card}`);
+    const observer = new IntersectionObserver((entries) => {
+      console.log(entries); // Add this line for debugging
+      entries.forEach((entry) => {
+        entry.target.classList.toggle(`${style.show}`, entry.isIntersecting);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 1,
+    });
+    cards.forEach((card) => observer.observe(card));
+  }, []);
+
+  
   
   return (
     <div className={style.aboutPage}>
@@ -59,55 +77,55 @@ export default function About() {
           </div>
 
           <div className={style.skillContentFirst}>
-            <div style={{ backgroundImage: `url(${gitImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${gitImage.src})` }}>
               <h1>Git</h1>
             </div>
-            <div style={{ backgroundImage: `url(${yarnImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${yarnImage.src})` }}>
               <h1>Yarn</h1>
             </div>
-            <div style={{ backgroundImage: `url(${npmImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${npmImage.src})` }}>
               <h1>NPM</h1>
             </div>
           </div>
 
           <div className={style.skillContentSecond}>
-            <div style={{ backgroundImage: `url(${htmlImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${htmlImage.src})` }}>
               <h1>HTML</h1>
             </div>
-            <div style={{ backgroundImage: `url(${CssImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${CssImage.src})` }}>
               <h1>CSS</h1>
             </div>
-            <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${SassImage.src})` }}>
               <h1>Sass</h1>
             </div>
-            <div style={{ backgroundImage: `url(${PhotoshopImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${PhotoshopImage.src})` }}>
               <h1 className={style.shortFont}>Photoshop</h1>
             </div>
           </div>
 
           <div className={style.skillContentThird}>
-            <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${NextImage.src})` }}>
               <h1>Next.js</h1>
             </div>
-            <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${ReactImage.src})` }}>
               <h1>React.js</h1>
             </div>
-            <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
               <h1>Typescript</h1>
             </div>
           </div>
 
           <div className={style.skillContentFourth}>
-            <div style={{ backgroundImage: `url(${GraphqlImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${GraphqlImage.src})` }}>
               <h1>GraphQL</h1>
             </div>
-            <div style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
               <h1>Firebase</h1>
             </div>
           </div>
 
           <div className={style.skillContentFifth}>
-            <div style={{ backgroundImage: `url(${JsImage.src})` }}>
+            <div className={style.card} style={{ backgroundImage: `url(${JsImage.src})` }}>
               <h1>Javascript</h1>
             </div>
           </div>

@@ -21,11 +21,26 @@ import Image from 'next/image';
 
 
 export default function Work() {
-
+  // changing metadata neame
   useEffect(() => {
     if (metadata.title) {
       document.title = String(metadata.title)
     }
+  }, []);
+
+  // animation of card
+  useEffect(() => {
+    const cards = document.querySelectorAll(`.${style.card}`);
+    const observer = new IntersectionObserver((entries) => {
+      console.log(entries); // Add this line for debugging
+      entries.forEach((entry) => {
+        entry.target.classList.toggle(`${style.show}`, entry.isIntersecting);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 1,
+    });
+    cards.forEach((card) => observer.observe(card));
   }, []);
   
   return (
@@ -42,7 +57,7 @@ export default function Work() {
         <span style={{ '--i' : 8 } as React.CSSProperties}>s</span>
       </div>
 
-      <div className={style.firstProject}>
+      <div className={`${style.firstProject} ${style.card}`}>
         <a href='https://giorgimachitadze-evsp.vercel.app/' className={style.innerFirstProject}>
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={evspImage.src} />
@@ -77,7 +92,7 @@ export default function Work() {
         </a>
       </div>
 
-      <div className={style.secondProject}>
+      <div className={`${style.secondProject} ${style.card}`}>
         <a href='https://giorgimachitadze-scarymaze.vercel.app/' className={style.innerSecondProject}>
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={scaryMazeImage.src} />
@@ -112,7 +127,7 @@ export default function Work() {
         </a>
       </div>
 
-      <div className={style.thirdProject}>
+      <div className={`${style.thirdProject} ${style.card}`}>
         <a href='https://giorgimachitadze-world.vercel.app/' className={style.innerThirdProject}>
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={worldImage.src} />
@@ -150,7 +165,7 @@ export default function Work() {
         </a>
       </div>
 
-      <div className={style.fourthProject}>
+      <div className={`${style.fourthProject} ${style.card}`}>
         <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFourthProject}>
           <div className={style.projectImage} >  
             <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     

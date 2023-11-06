@@ -10,12 +10,15 @@ import Image from 'next/image';
 
 
 export default function Contact() {
+
+  // changing metadata title
   useEffect(() => {
     if (metadata.title) {
       document.title = String(metadata.title)
     }
   }, []);
 
+  // sending email logic
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const form: any = useRef();
