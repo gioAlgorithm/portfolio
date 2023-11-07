@@ -23,17 +23,17 @@ export default function Contact() {
 
   const form: any = useRef();
 
-    const sendEmail = (e: any) => {
-        e.preventDefault();
+  const sendEmail = (e: any) => {
+    e.preventDefault();
 
-        emailjs.sendForm('service_rwzuuq1', 'template_oss7n3u', form.current, '5kjCSKMjUxdBaZeqz')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset();
-        setIsSubmitted(true);
+    emailjs.sendForm('service_rwzuuq1', 'template_oss7n3u', form.current, '5kjCSKMjUxdBaZeqz')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    form.current.reset(); // Reset the form.
+    setIsSubmitted(true);
   };
   
   return (
@@ -63,7 +63,7 @@ export default function Contact() {
                 </div>
 
                 <div className={style.btnContainer}>
-                  <button className={style.btn} onClick={()=> setIsSubmitted} type="submit" value="Send">
+                <button className={style.btn} onClick={sendEmail} type="submit" value="Send">
                     <span>SEND</span>
                     <div className={style.liquid}></div>
                   </button>
