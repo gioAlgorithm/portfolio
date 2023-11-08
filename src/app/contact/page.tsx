@@ -26,6 +26,8 @@ export default function Contact() {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
+    const name = form.current.user_name.value;
+
     emailjs.sendForm('service_rwzuuq1', 'template_oss7n3u', form.current, '5kjCSKMjUxdBaZeqz')
     .then((result) => {
         console.log(result.text);
@@ -41,8 +43,19 @@ export default function Contact() {
       <div className={style.innerContactPage}>
       
         <div className={style.innerContactQuestion}>
-          <h1>Do you have any question?</h1>
-          <p>send me an email</p>
+          {!isSubmitted &&
+            <>
+              <h1>Do you have any question?</h1>
+              <p>send me an email</p>
+            </> 
+          }
+          {isSubmitted && 
+            <>
+              <h2>Thank you for reaching out with your question.</h2>
+              <p>I&apos;ve received your email, and I&apos;ll get back to you as soon as possible.</p>
+            </>
+          }
+          
         </div>
 
         <div className={style.innerContact}>
