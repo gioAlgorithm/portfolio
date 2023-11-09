@@ -26,8 +26,6 @@ export default function Contact() {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    const name = form.current.user_name.value;
-
     emailjs.sendForm('service_rwzuuq1', 'template_oss7n3u', form.current, '5kjCSKMjUxdBaZeqz')
     .then((result) => {
         console.log(result.text);

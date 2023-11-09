@@ -58,33 +58,32 @@ export default function Work() {
       </div>
 
       <div className={`${style.firstProject} ${style.card}`}>
-        <a href='https://giorgimachitadze-evsp.vercel.app/' className={style.innerFirstProject}>
-          <div className={style.projectImage} >       
-            <Image alt='project image' width={600} height={200} src={evspImage.src} />
+        <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFirstProject}>
+          <div className={style.projectImage} >  
+            <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     
           </div>
           <div className={style.projectInfo}>
             <div>
               <div className={style.projectAbout}>
                 
-                <h2 className={style.projectTitle}>Entertainment VS Productivity <BsArrowRightShort /></h2>
+                <h2 className={style.projectTitle}>Ecommerce <BsArrowRightShort /></h2>
                 <p>
-                  &quot;Entertainment vs. Productivity&quot; is a web app that helps you balance work and leisure. It has three elements: 
-                  Productivity, Entertainment, and Balance. Click &quot;Productivity&quot; to start a timer for work, then &quot;Submit&quot; to record time. 
-                  &quot;Entertainment&quot; offers breaks. &quot;Balance&quot; suggests switching based on your activity, ensuring a harmonious routine.
+                  I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. 
+                  The site includes a search bar, a shopping cart, and a cart page, showcasing my skills in web development.
                 </p>
               </div>
               <div className={style.projectTools}>
-                <div style={{ backgroundImage: `url(${CssImage.src})` }}>
-                  <h1>CSS</h1>
+                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+                  <h1>Next.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+                  <h1>Sass</h1>
                 </div>
                 <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
                   <h1>React.js</h1>
                 </div>
-                <div style={{ backgroundImage: `url(${JsImage.src})` }}>
-                  <h1>Javascript</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
-                  <h1>Firebase</h1>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
                 </div>
               </div>
             </div>
@@ -166,32 +165,33 @@ export default function Work() {
       </div>
 
       <div className={`${style.fourthProject} ${style.card}`}>
-        <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFourthProject}>
-          <div className={style.projectImage} >  
-            <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     
+        <a href='https://giorgimachitadze-evsp.vercel.app/' className={style.innerFourthProject}>
+          <div className={style.projectImage} >       
+            <Image alt='project image' width={600} height={200} src={evspImage.src} />
           </div>
           <div className={style.projectInfo}>
             <div>
               <div className={style.projectAbout}>
                 
-                <h2 className={style.projectTitle}>Ecommerce <BsArrowRightShort /></h2>
+                <h2 className={style.projectTitle}>Entertainment VS Productivity <BsArrowRightShort /></h2>
                 <p>
-                  I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. 
-                  The site includes a search bar, a shopping cart, and a cart page, showcasing my skills in web development.
+                  &quot;Entertainment vs. Productivity&quot; is a web app that helps you balance work and leisure. It has three elements: 
+                  Productivity, Entertainment, and Balance. Click &quot;Productivity&quot; to start a timer for work, then &quot;Submit&quot; to record time. 
+                  &quot;Entertainment&quot; offers breaks. &quot;Balance&quot; suggests switching based on your activity, ensuring a harmonious routine.
                 </p>
               </div>
               <div className={style.projectTools}>
-                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
-                  <h1>Next.js</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
-                  <h1>Sass</h1>
+                <div style={{ backgroundImage: `url(${CssImage.src})` }}>
+                  <h1>CSS</h1>
                 </div>
                 <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
                   <h1>React.js</h1>
                 </div>
-                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
-                  <h1>Typescript</h1>
+                <div style={{ backgroundImage: `url(${JsImage.src})` }}>
+                  <h1>Javascript</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
+                  <h1>Firebase</h1>
                 </div>
               </div>
             </div>
