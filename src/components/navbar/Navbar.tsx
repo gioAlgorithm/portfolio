@@ -80,9 +80,9 @@ export default function Navbar() {
       <div className={style.navigationButton} onClick={handleShow}><GiHamburgerMenu /></div>
       {show && 
         <div className={style.navigationMenu} ref={menuRef}>
-          <Link className={style.active} onClick={handleShowOff} href="#about">About</Link>
-          <Link className={style.active} id={style.middleNavigation} onClick={handleShowOff} href="#work">Work</Link>
-          <Link className={style.active} onClick={handleShowOff} href="#contact">Contact</Link>
+          <Link className={activeSection === 'about' ? style.active : ''} onClick={handleShowOff} href="#about">About</Link>
+          <Link className={activeSection === 'work' ? style.active : ''} id={style.middleNavigation} onClick={handleShowOff} href="#work">Work</Link>
+          <Link className={activeSection === 'contact' ? style.active : ''} onClick={handleShowOff} href="#contact">Contact</Link>
         </div>
       }
     </div>
