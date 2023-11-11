@@ -2,15 +2,13 @@
 import style from "./Navbar.module.scss"
 import logo from '/public/assets/image/logo-white.png'
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 
 export default function Navbar() {
-  const router = usePathname();
-
   const [show, setShow] = useState(false)
+  const [activeSection, setActiveSection] = useState('about');
 
   // show the dropdown menu
   const handleShow = ()=>{
@@ -37,6 +35,35 @@ export default function Navbar() {
     };
   }, []);
 
+  // scroll active animation
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const sections = ['about', 'work', 'contact']; // Add the IDs of your components
+      
+      sections.forEach((sectionId) => {
+        const sectionElement = document.getElementById(sectionId);
+  
+        if (sectionElement) {
+          const offset = sectionElement.offsetTop;
+          const height = sectionElement.offsetHeight;
+  
+          if (scrollY >= offset && scrollY < offset + height) {
+            setActiveSection(sectionId);
+          }
+        }
+      });
+  
+      
+    };
+  
+    document.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className={style.navbar}>
 
@@ -45,17 +72,17 @@ export default function Navbar() {
       </div>
 
       <div className={style.navigation}>
-        <Link className={router === "/" ? style.active : ""} href="/">About</Link>
-        <Link className={router === "/work" ? style.active : ""} href="/work">Work</Link>
-        <Link className={router === "/contact" ? style.active : ""} href="/contact">Contact</Link>
+      <Link className={activeSection === 'about' ? style.active : ''} href="#about">About</Link>
+        <Link className={activeSection === 'work' ? style.active : ''} href="#work">Work</Link>
+        <Link className={activeSection === 'contact' ? style.active : ''} href="#contact">Contact</Link>
       </div>
 
       <div className={style.navigationButton} onClick={handleShow}><GiHamburgerMenu /></div>
       {show && 
         <div className={style.navigationMenu} ref={menuRef}>
-          <Link className={router === "/" ? style.active : ""} onClick={handleShowOff} href="/">About</Link>
-          <Link className={router === "/work" ? style.active : ""} id={style.middleNavigation} onClick={handleShowOff} href="/work">Work</Link>
-          <Link className={router === "/contact" ? style.active : ""} onClick={handleShowOff} href="/contact">Contact</Link>
+          <Link className={style.active} onClick={handleShowOff} href="#about">About</Link>
+          <Link className={style.active} id={style.middleNavigation} onClick={handleShowOff} href="#work">Work</Link>
+          <Link className={style.active} onClick={handleShowOff} href="#contact">Contact</Link>
         </div>
       }
     </div>

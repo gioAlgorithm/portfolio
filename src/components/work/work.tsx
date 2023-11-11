@@ -44,7 +44,7 @@ export default function Work() {
   }, []);
   
   return (
-    <div className={style.workPage}>
+    <div className={style.workPage} id='work'>
 
       <div className={style.waviy}>
         <span style={{ '--i' : 1 } as React.CSSProperties}>P</span>
@@ -57,7 +57,7 @@ export default function Work() {
         <span style={{ '--i' : 8 } as React.CSSProperties}>s</span>
       </div>
 
-      <div className={`${style.firstProject} ${style.card}`}>
+      <div className={`${style.firstProject} ${style.card}`} >
         <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFirstProject}>
           <div className={style.projectImage} >  
             <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     

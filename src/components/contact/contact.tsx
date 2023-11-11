@@ -37,7 +37,7 @@ export default function Contact() {
   };
   
   return (
-    <div className={style.contactPage}>
+    <div className={style.contactPage} id='contact'>
       <div className={style.innerContactPage}>
       
         <div className={style.innerContactQuestion}>
