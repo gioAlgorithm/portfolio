@@ -18,6 +18,21 @@ export default function Contact() {
     }
   }, []);
 
+  // animation
+  useEffect(() => {
+    const animations = document.querySelectorAll(`.${style.animation}`);
+    const observer = new IntersectionObserver((entries) => {
+      console.log(entries); // Add this line for debugging
+      entries.forEach((entry) => {
+        entry.target.classList.toggle(`${style.show}`, entry.isIntersecting);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 1,
+    });
+    animations.forEach((animations) => observer.observe(animations));
+  }, []);
+
   // sending email logic
   const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -40,7 +55,7 @@ export default function Contact() {
     <div className={style.contactPage} id='contact'>
       <div className={style.innerContactPage}>
       
-        <div className={style.innerContactQuestion}>
+        <div className={`${style.innerContactQuestion} ${style.animation}`}>
           {!isSubmitted &&
             <>
               <h1>Do you have any question?</h1>
@@ -59,21 +74,21 @@ export default function Contact() {
         <div className={style.innerContact}>
           {!isSubmitted &&
             <form ref={form} onSubmit={sendEmail}>
-                <div className={style.inputName}>
+                <div className={`${style.inputName} ${style.animation}`}>
                   <BsFillPersonFill className={style.inputNameIcon} />
                   <input type="text" name="user_name" placeholder="Name" required/>
                 </div>
 
-                <div className={style.inputEmail}>
+                <div className={`${style.inputEmail} ${style.animation}`}>
                   <MdMail className={style.inputEmailIcon} />
                   <input type="email" name="user_email" placeholder="Email" required/>
                 </div>
 
-                <div className={style.inputTextarea}>
+                <div className={`${style.inputTextarea} ${style.animation}`}>
                   <textarea required name="message" placeholder="Message" />
                 </div>
 
-                <div className={style.btnContainer}>
+                <div className={`${style.btnContainer} ${style.animation}`}>
                 <button className={style.btn} onClick={sendEmail} type="submit" value="Send">
                     <span>SEND</span>
                     <div className={style.liquid}></div>

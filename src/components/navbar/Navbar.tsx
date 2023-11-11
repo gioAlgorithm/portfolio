@@ -35,34 +35,33 @@ export default function Navbar() {
     };
   }, []);
 
-  // scroll active animation
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const sections = ['about', 'work', 'contact']; // Add the IDs of your components
-      
-      sections.forEach((sectionId) => {
-        const sectionElement = document.getElementById(sectionId);
-  
-        if (sectionElement) {
-          const offset = sectionElement.offsetTop;
-          const height = sectionElement.offsetHeight;
-  
-          if (scrollY >= offset && scrollY < offset + height) {
-            setActiveSection(sectionId);
-          }
+// scroll active animation
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const offsetThreshold = 100; // Adjust this value as needed
+    const sections = ['about', 'work', 'contact'];
+
+    sections.forEach((sectionId) => {
+      const sectionElement = document.getElementById(sectionId);
+
+      if (sectionElement) {
+        const offset = sectionElement.offsetTop - offsetThreshold;
+        const height = sectionElement.offsetHeight;
+
+        if (scrollY >= offset && scrollY < offset + height) {
+          setActiveSection(sectionId);
         }
-      });
-  
-      
-    };
-  
-    document.addEventListener('scroll', handleScroll);
-  
-    return () => {
-      document.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      }
+    });
+  };
+
+  document.addEventListener('scroll', handleScroll);
+
+  return () => {
+    document.removeEventListener('scroll', handleScroll);
+  };
+}, []);
 
   return (
     <div className={style.navbar}>

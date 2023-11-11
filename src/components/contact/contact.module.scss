@@ -32,7 +32,7 @@
                 background-color: rgb(240,240,240);
                 border: 1px solid rgb(32, 31, 29);
                 margin: 0 auto;
-                margin-top: 100px;
+                margin-top: 70px;
                 height: 45px;
                 border-radius: 12px;
                 display: flex;
@@ -205,6 +205,18 @@
         transform: translate(-50%,-75%) rotate(360deg);
     }
 }
+// animation
+.animation{
+    opacity: 0;
+    transition: 500ms;
+    transform: translateY(50px);
+    filter:blur(5px);
+}
+.animation.show{
+    transform: translateY(0);
+    opacity: 1;
+    filter:blur(0)
+}
 
 // responsive
 @media (max-width: 750px){
@@ -267,7 +279,7 @@
 
             .innerContact{
                 .inputName{
-                    margin-top: 70px;
+                    margin-top: 50px;
                 }
                 .success{
                     width: 320px;
@@ -293,7 +305,7 @@
 
             .innerContact{
                 .inputName{
-                    margin-top: 50px;
+                    margin-top: 30px;
                 }
                 .success{
                     width: 240px;
