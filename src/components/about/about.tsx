@@ -65,10 +65,10 @@ export default function About() {
             />
           </h1>
           <p className={style.text}>
-            Hello, I&apos;m a passionate front-end web developer located in Georgia. My love for web development fuels my daily drive to create a multitude of websites,
-            allowing me to continuously expand my knowledge and refine my skills. My journey in this dynamic field has been a thrilling exploration of creativity and problem-solving. 
-            With each project I take on, I embrace the opportunity to push my boundaries and stay at the forefront of the ever-evolving web development landscape. This commitment to growth
-            keeps me enthusiastic and committed to delivering top-notch web experiences to clients and users alike.
+            Hi, I&apos;m a web developer from Georgia who loves creating websites. I enjoy learning and improving my skills every day. 
+            Web development is a fun and creative journey for me, where I get to solve interesting problems. 
+            I take on different projects to challenge myself and stay updated on the latest trends in web development. 
+            I&apos;m dedicated to growing and always excited to deliver great website experiences to clients and users.
           </p>
           
         </div>
