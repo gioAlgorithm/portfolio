@@ -342,6 +342,18 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .card {
+      transform: translateX(20px); /* Adjust the value accordingly */
+    }
+    .text{
+        transform: translateY(-50px);
+        
+    }
+    .text.textShow{
+        transform: translateY(0);
+    }
+  }
 
 @media( max-width: 620px){
     .innerAboutPage{

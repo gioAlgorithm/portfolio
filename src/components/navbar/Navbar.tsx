@@ -71,7 +71,7 @@ useEffect(() => {
       </div>
 
       <div className={style.navigation}>
-      <Link className={activeSection === 'about' ? style.active : ''} href="#about">About</Link>
+        <Link className={activeSection === 'about' ? style.active : ''} href="#about">About</Link>
         <Link className={activeSection === 'work' ? style.active : ''} href="#work">Work</Link>
         <Link className={activeSection === 'contact' ? style.active : ''} href="#contact">Contact</Link>
       </div>

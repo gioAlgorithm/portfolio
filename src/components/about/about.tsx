@@ -27,26 +27,29 @@ export default function About() {
   }, []);
 
   // animation
-  useEffect(() => {
-    const elements = document.querySelectorAll(`.${style.card}, .${style.text}`);
-    const observer = new IntersectionObserver((entries) => {
-      console.log(entries); // Add this line for debugging
-      entries.forEach((entry) => {
-        if (entry.target.classList.contains(style.card)) {
-          // Apply styles or animations for cards
-          entry.target.classList.toggle(`${style.show}`, entry.isIntersecting);
-        } else if (entry.target.classList.contains(style.text)) {
-          // Apply styles or animations for text elements
-          entry.target.classList.toggle(`${style.textShow}`, entry.isIntersecting);
-        }
-
+// animation
+useEffect(() => {
+  const elements = document.querySelectorAll(`.${style.card}, .${style.text}`);
+  const observer = new IntersectionObserver((entries) => {
+    console.log(entries); // Add this line for debugging
+    entries.forEach((entry) => {
+      if (entry.target.classList.contains(style.text)) {
+        // Apply styles or animations for text elements
+        entry.target.classList.toggle(`${style.textShow}`, entry.isIntersecting);
         if (entry.isIntersecting) observer.unobserve(entry.target);
-      });
-    }, {
-      threshold: 1,
+      } else {
+        // Apply styles or animations for other elements (cards)
+        entry.target.classList.toggle(`${style.show}`, entry.isIntersecting);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
+      }
     });
-    elements.forEach((element) => observer.observe(element));
-  }, []);
+  }, {
+    threshold: 1,
+    rootMargin: "0px 0px 68px 0px", // Adjust the value accordingly
+  });
+
+  elements.forEach((element) => observer.observe(element));
+}, []);
 
   
   
