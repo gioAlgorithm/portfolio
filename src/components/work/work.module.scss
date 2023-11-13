@@ -444,13 +444,13 @@
     opacity: 0;
     visibility: hidden;
     transition: 500ms;
-    transform: translateX(-50px);
+    transform: translateY(-50px);
     filter:blur(5px);
 }
 .card.show{
     visibility: visible;
     display: flex;
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     filter:blur(0)
 }
