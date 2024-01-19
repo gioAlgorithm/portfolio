@@ -45,7 +45,7 @@ useEffect(() => {
     });
   }, {
     threshold: 1,
-    rootMargin: "0px 0px 68px 0px", // Adjust the value accordingly
+    rootMargin: "0px 0px 68px 0px", 
   });
 
   elements.forEach((element) => observer.observe(element));
@@ -68,10 +68,10 @@ useEffect(() => {
             />
           </h1>
           <p className={style.text}>
-            Hello, I&apos;m a passionate front-end web developer located in Georgia. My love for web development fuels my daily drive to create a multitude of websites, allowing me to 
-            continuously expand my knowledge and refine my skills. My journey in this dynamic field has been a thrilling exploration of creativity and problem-solving. 
-            With each project I take on, I embrace the opportunity to push my boundaries and stay at the forefront of the ever-evolving web development landscape. 
-            This commitment to growth keeps me enthusiastic and committed to delivering top-notch web experiences to clients and users alike.
+            <span className={style.text}>Hello, I&apos;m a passionate front-end web developer located in Georgia. My love for web development fuels my daily drive to create a multitude of websites, allowing me to </span>
+            <span className={style.text}>continuously expand my knowledge and refine my skills. My journey in this dynamic field has been a thrilling exploration of creativity and problem-solving. </span>
+            <span className={style.text}> With each project I take on, I embrace the opportunity to push my boundaries and stay at the forefront of the ever-evolving web development landscape. </span>
+            <span className={style.text}>This commitment to growth keeps me enthusiastic and committed to delivering top-notch web experiences to clients and users alike.</span>
           </p>
           
         </div>
