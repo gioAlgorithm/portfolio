@@ -5,7 +5,7 @@ import style from "./work.module.scss"
 import { BsArrowRightShort } from "react-icons/bs";
 // importing images
 import evspImage from "../../../public/assets/image/evsp.png"
-import scaryMazeImage from "../../../public/assets/image/scary-maze.png"
+import mazeImage from "../../../public/assets/image/maze.png"
 import worldImage from "../../../public/assets/image/world-website.png"
 import ecommerceImage from "../../../public/assets/image/ecommerce.png"
 import CssImage from "../../../public/assets/svg/css.png"
@@ -13,7 +13,6 @@ import ReactImage from "../../../public/assets/svg/react.png"
 import SassImage from "../../../public/assets/svg/sass.png"
 import FirebaseImage from "../../../public/assets/svg/firebase.png"
 import GraphqlImage from "../../../public/assets/svg/graphql.png"
-import htmlImage from "../../../public/assets/svg/html.png"
 import JsImage from "../../../public/assets/svg/js.png"
 import NextImage from "../../../public/assets/svg/nextjs.png"
 import TypescriptImage from "../../../public/assets/svg/typescript.png"
@@ -58,7 +57,45 @@ export default function Work() {
       </div>
 
       <div className={`${style.firstProject} ${style.card}`} >
-        <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerFirstProject}>
+      <a href='https://giorgimachitadze-maze.vercel.app/' className={style.innerFirstProject}>
+          <div className={style.projectImage} >       
+            <Image alt='project image' width={600} height={200} src={mazeImage.src} />
+          </div>
+          <div className={style.projectInfo}>
+            <div>
+              <div className={style.projectAbout}>
+                
+                <h2 className={style.projectTitle}>The Maze <BsArrowRightShort /></h2>
+                <p>
+                  &quot;The Maze&quot; presents 10 levels of challenging mazes filled with obstacles. 
+                  Navigate the red dot, putting your reflexes to the test. Enjoy personalized user profiles, detailed statistics, and compete on global leaderboards.
+                </p>
+              </div>
+              <div className={style.projectTools}>
+                <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
+                  <h1>React.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+                  <h1>Next.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+                  <h1>Sass</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
+                  <h1>Firebase</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+
+      <div className={`${style.secondProject} ${style.card}`}>
+      <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerSecondProject}>
           <div className={style.projectImage} >  
             <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     
           </div>
@@ -84,41 +121,6 @@ export default function Work() {
                 </div>
                 <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
                   <h1>Typescript</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className={`${style.secondProject} ${style.card}`}>
-        <a href='https://giorgimachitadze-scarymaze.vercel.app/' className={style.innerSecondProject}>
-          <div className={style.projectImage} >       
-            <Image alt='project image' width={600} height={200} src={scaryMazeImage.src} />
-          </div>
-          <div className={style.projectInfo}>
-            <div>
-              <div className={style.projectAbout}>
-                
-                <h2 className={style.projectTitle}>Scary Maze <BsArrowRightShort /></h2>
-                <p>
-                Experience the upgraded Scary Maze Game with five intense levels, each building suspense. 
-                Brace for a heart-stopping climax in the middle of the fifth level. 
-                Are you up for the challenge? Test your nerves and remember, the scream is just the beginning.
-                </p>
-              </div>
-              <div className={style.projectTools}>
-                <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
-                  <h1>React.js</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
-                  <h1>Typescript</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
-                  <h1>Next.js</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
-                  <h1>Sass</h1>
                 </div>
               </div>
             </div>
