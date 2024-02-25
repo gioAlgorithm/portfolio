@@ -1,6 +1,5 @@
 "use client"
 import React, {useEffect} from 'react'
-import {metadata} from "./metaData"
 import style from "./about.module.scss"
 import Typewriter from 'typewriter-effect';
 // importing pictures:
@@ -19,19 +18,12 @@ import yarnImage from "../../../public/assets/svg/yarn.png"
 import npmImage from "../../../public/assets/svg/npm.png"
 
 export default function About() {
-  // changing metadata title
-  useEffect(() => {
-    if (metadata.title) {
-      document.title = String(metadata.title)
-    }
-  }, []);
 
-  // animation
+
 // animation
 useEffect(() => {
   const elements = document.querySelectorAll(`.${style.card}, .${style.text}`);
   const observer = new IntersectionObserver((entries) => {
-    console.log(entries); // Add this line for debugging
     entries.forEach((entry) => {
       if (entry.target.classList.contains(style.text)) {
         // Apply styles or animations for text elements

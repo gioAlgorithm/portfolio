@@ -1,6 +1,5 @@
 "use client"
 import React, {useEffect} from 'react'
-import { metadata } from './metaData';
 import style from "./work.module.scss"
 import { BsArrowRightShort } from "react-icons/bs";
 // importing images
@@ -20,18 +19,11 @@ import Image from 'next/image';
 
 
 export default function Work() {
-  // changing metadata neame
-  useEffect(() => {
-    if (metadata.title) {
-      document.title = String(metadata.title)
-    }
-  }, []);
 
   // animation of card
   useEffect(() => {
     const cards = document.querySelectorAll(`.${style.card}`);
     const observer = new IntersectionObserver((entries) => {
-      console.log(entries); // Add this line for debugging
       entries.forEach((entry) => {
         entry.target.classList.toggle(`${style.show}`, entry.isIntersecting);
         if (entry.isIntersecting) observer.unobserve(entry.target);
