@@ -59,7 +59,7 @@ useEffect(() => {
               }}
             />
           </h1>
-          <p>
+          <p className={style.text}>
             <span className={style.text}>Hello, I&apos;m a passionate front-end web developer located in Georgia. My love for web development fuels my daily drive to create a multitude of websites, allowing me to </span>
             <span className={style.text}>continuously expand my knowledge and refine my skills. My journey in this dynamic field has been a thrilling exploration of creativity and problem-solving. </span>
             <span className={style.text}> With each project I take on, I embrace the opportunity to push my boundaries and stay at the forefront of the ever-evolving web development landscape. </span>

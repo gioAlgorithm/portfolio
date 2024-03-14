@@ -20,6 +20,7 @@ export default function Contact() {
       });
     }, {
       threshold: 1,
+
     });
     animations.forEach((animations) => observer.observe(animations));
   }, []);
@@ -27,7 +28,7 @@ export default function Contact() {
   // sending email logic
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const form = useRef<HTMLFormElement>(null);;
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
@@ -96,3 +97,11 @@ export default function Contact() {
     
   )
 }
+
+
+
+
+
+
+
+
