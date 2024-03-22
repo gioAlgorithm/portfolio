@@ -15,6 +15,7 @@ import GraphqlImage from "../../../public/assets/svg/graphql.png"
 import JsImage from "../../../public/assets/svg/js.png"
 import NextImage from "../../../public/assets/svg/nextjs.png"
 import TypescriptImage from "../../../public/assets/svg/typescript.png"
+import Iuri from "../../../public/assets/image/iuriweb.png"
 import Image from 'next/image';
 
 
@@ -49,32 +50,30 @@ export default function Work() {
       </div>
 
       <div className={`${style.firstProject} ${style.card}`} >
-      <a href='https://giorgimachitadze-maze.vercel.app/' className={style.innerFirstProject}>
+        <a href='https://giorgimachitadze-evsp.vercel.app/' className={style.innerFirstProject} target="_blank">
           <div className={style.projectImage} >       
-            <Image alt='project image' width={600} height={200} src={mazeImage.src} />
+            <Image alt='project image' width={600} height={200} src={evspImage.src} />
           </div>
           <div className={style.projectInfo}>
             <div>
               <div className={style.projectAbout}>
                 
-                <h2 className={style.projectTitle}>The Maze <BsArrowRightShort /></h2>
+                <h2 className={style.projectTitle}>Entertainment VS Productivity <BsArrowRightShort /></h2>
                 <p>
-                  &quot;The Maze&quot; presents 10 levels of challenging mazes filled with obstacles. 
-                  Navigate the red dot, putting your reflexes to the test. Enjoy personalized user profiles, detailed statistics, and compete on global leaderboards.
+                  &quot;Entertainment vs. Productivity&quot; is a web app that helps you balance work and leisure. It has three elements: 
+                  Productivity, Entertainment, and Balance. Click &quot;Productivity&quot; to start a timer for work, then &quot;Submit&quot; to record time. 
+                  &quot;Entertainment&quot; offers breaks. &quot;Balance&quot; suggests switching based on your activity, ensuring a harmonious routine.
                 </p>
               </div>
               <div className={style.projectTools}>
+                <div style={{ backgroundImage: `url(${CssImage.src})` }}>
+                  <h1>CSS</h1>
+                </div>
                 <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
                   <h1>React.js</h1>
                 </div>
-                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
-                  <h1>Typescript</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
-                  <h1>Next.js</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
-                  <h1>Sass</h1>
+                <div style={{ backgroundImage: `url(${JsImage.src})` }}>
+                  <h1>Javascript</h1>
                 </div>
                 <div style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
                   <h1>Firebase</h1>
@@ -83,45 +82,10 @@ export default function Work() {
             </div>
           </div>
         </a>
-        
       </div>
 
       <div className={`${style.secondProject} ${style.card}`}>
-      <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerSecondProject}>
-          <div className={style.projectImage} >  
-            <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     
-          </div>
-          <div className={style.projectInfo}>
-            <div>
-              <div className={style.projectAbout}>
-                
-                <h2 className={style.projectTitle}>Ecommerce <BsArrowRightShort /></h2>
-                <p>
-                  I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. 
-                  The site includes a search bar, a shopping cart, and a cart page, showcasing my skills in web development.
-                </p>
-              </div>
-              <div className={style.projectTools}>
-                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
-                  <h1>Next.js</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
-                  <h1>Sass</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
-                  <h1>React.js</h1>
-                </div>
-                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
-                  <h1>Typescript</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className={`${style.thirdProject} ${style.card}`}>
-        <a href='https://giorgimachitadze-world.vercel.app/' className={style.innerThirdProject}>
+        <a href='https://giorgimachitadze-world.vercel.app/' className={style.innerSecondProject} target="_blank">
           <div className={style.projectImage} >       
             <Image alt='project image' width={600} height={200} src={worldImage.src} />
           </div>
@@ -158,31 +122,67 @@ export default function Work() {
         </a>
       </div>
 
-      <div className={`${style.fourthProject} ${style.card}`}>
-        <a href='https://giorgimachitadze-evsp.vercel.app/' className={style.innerFourthProject}>
-          <div className={style.projectImage} >       
-            <Image alt='project image' width={600} height={200} src={evspImage.src} />
+      <div className={`${style.thirdProject} ${style.card}`}>
+        <a href='https://giorgimachitadze-ecommerce.vercel.app/' className={style.innerThirdProject} target="_blank">
+          <div className={style.projectImage} >  
+            <Image alt='project image' width={600} height={200} src={ecommerceImage.src} />     
           </div>
           <div className={style.projectInfo}>
             <div>
               <div className={style.projectAbout}>
                 
-                <h2 className={style.projectTitle}>Entertainment VS Productivity <BsArrowRightShort /></h2>
+                <h2 className={style.projectTitle}>Ecommerce <BsArrowRightShort /></h2>
                 <p>
-                  &quot;Entertainment vs. Productivity&quot; is a web app that helps you balance work and leisure. It has three elements: 
-                  Productivity, Entertainment, and Balance. Click &quot;Productivity&quot; to start a timer for work, then &quot;Submit&quot; to record time. 
-                  &quot;Entertainment&quot; offers breaks. &quot;Balance&quot; suggests switching based on your activity, ensuring a harmonious routine.
+                  I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. 
+                  The site includes a search bar, a shopping cart, and a cart page, showcasing my skills in web development.
                 </p>
               </div>
               <div className={style.projectTools}>
-                <div style={{ backgroundImage: `url(${CssImage.src})` }}>
-                  <h1>CSS</h1>
+                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+                  <h1>Next.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+                  <h1>Sass</h1>
                 </div>
                 <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
                   <h1>React.js</h1>
                 </div>
-                <div style={{ backgroundImage: `url(${JsImage.src})` }}>
-                  <h1>Javascript</h1>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className={`${style.fourthProject} ${style.card}`}>
+        <a href='https://giorgimachitadze-maze.vercel.app/' className={style.innerFourthProject} target="_blank">
+          <div className={style.projectImage} >       
+            <Image alt='project image' width={600} height={200} src={mazeImage.src} />
+          </div>
+          <div className={style.projectInfo}>
+            <div>
+              <div className={style.projectAbout}>
+                
+                <h2 className={style.projectTitle}>The Maze <BsArrowRightShort /></h2>
+                <p>
+                  &quot;The Maze&quot; presents 10 levels of challenging mazes filled with obstacles. 
+                  Navigate the red dot, putting your reflexes to the test. Enjoy personalized user profiles, detailed statistics, and compete on global leaderboards.
+                </p>
+              </div>
+              <div className={style.projectTools}>
+                <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
+                  <h1>React.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${NextImage.src})` }}>
+                  <h1>Next.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+                  <h1>Sass</h1>
                 </div>
                 <div style={{ backgroundImage: `url(${FirebaseImage.src})` }}>
                   <h1>Firebase</h1>
@@ -190,7 +190,38 @@ export default function Work() {
               </div>
             </div>
           </div>
-        </a>
+        </a> 
+      </div>
+
+      <div className={`${style.fifthProject} ${style.card}`}>
+        <a href='https://iuri.ge/?lang=ENG' className={style.innerFifthProject} target="_blank" >
+          <div className={style.projectImage} >       
+            <Image alt='project image' width={600} height={200} src={Iuri.src} />
+          </div>
+          <div className={style.projectInfo}>
+            <div>
+              <div className={style.projectAbout}>
+                
+                <h2 className={style.projectTitle}>Iuri.ge <BsArrowRightShort /></h2>
+                <p>
+                  &rdquo;Lawyer&apos;s Website: SEO-Optimized with Multilingual Support&quot;
+                  A lawyer&apos;s website designed for easy search engine discovery. Supports Russian, English, and Georgian languages, featuring email capabilities and streamlined functionality.
+                </p>
+              </div>
+              <div className={style.projectTools}>
+                <div style={{ backgroundImage: `url(${ReactImage.src})` }}>
+                  <h1>React.js</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${TypescriptImage.src})` }}>
+                  <h1>Typescript</h1>
+                </div>
+                <div style={{ backgroundImage: `url(${SassImage.src})` }}>
+                  <h1>Sass</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a> 
       </div>
 
     </div>
