@@ -15,7 +15,7 @@ import GraphqlImage from "../../../public/assets/svg/graphql.png"
 import JsImage from "../../../public/assets/svg/js.png"
 import NextImage from "../../../public/assets/svg/nextjs.png"
 import TypescriptImage from "../../../public/assets/svg/typescript.png"
-import IuriWeb from "../../../public/assets/image/iuriweb.png"
+import lawyerImage from "../../../public/assets/image/iuritsereteli.png"
 import Image from 'next/image';
 
 
@@ -196,7 +196,7 @@ export default function Work() {
       <div className={`${style.fifthProject} ${style.card}`}>
         <a href='https://iuri.ge/?lang=ENG' className={style.innerFifthProject} target="_blank" >
           <div className={style.projectImage} >       
-            <Image alt='project image' width={600} height={200} src={IuriWeb.src} />
+            <Image alt='project image' width={600} height={200} src={lawyerImage.src} />
           </div>
           <div className={style.projectInfo}>
             <div>
