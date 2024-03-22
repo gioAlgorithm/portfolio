@@ -68,26 +68,26 @@ export default function Contact() {
         <div className={style.innerContact}>
           {!isSubmitted &&
             <form ref={form} onSubmit={sendEmail}>
-                <div className={`${style.inputName} ${style.animation}`}>
-                  <BsFillPersonFill className={style.inputNameIcon} />
-                  <input type="text" name="user_name" placeholder="Name" required />
-                </div>
+              <div className={`${style.inputName} ${style.animation}`}>
+                <BsFillPersonFill className={style.inputNameIcon} />
+                <input type="text" name="user_name" placeholder="Name" required />
+              </div>
 
-                <div className={`${style.inputEmail} ${style.animation}`}>
-                  <MdMail className={style.inputEmailIcon} />
-                  <input type="email" name="user_email" placeholder="Email" required />
-                </div>
+              <div className={`${style.inputEmail} ${style.animation}`}>
+                <MdMail className={style.inputEmailIcon} />
+                <input type="email" name="user_email" placeholder="Email" required />
+              </div>
 
-                <div className={`${style.inputTextarea} ${style.animation}`}>
-                  <textarea  name="message" placeholder="Message" required />
-                </div>
+              <div className={`${style.inputTextarea} ${style.animation}`}>
+                <textarea  name="message" placeholder="Message" required />
+              </div>
 
-                <div className={`${style.btnContainer} ${style.animation}`}>
-                  <button className={style.btn} type="submit" value="Send">
-                    <span>SEND</span>
-                    <div className={style.liquid}></div>
-                  </button>
-                </div>
+              <div className={`${style.btnContainer} ${style.animation}`}>
+                <button className={style.btn} type="submit" value="Send">
+                  <span>SEND</span>
+                  <div className={style.liquid}></div>
+                </button>
+              </div>
             </form>
           }
           {isSubmitted && <Image alt="success" width={600} height={600} src={newSuccess.src} className={style.success} />}
