@@ -132,7 +132,7 @@ export default function Work() {
               <div>
                 <div className={style.projectAbout}>
                   
-                  <h2 className={style.projectTitle}>Ecommerce <BsArrowRightShort /></h2>
+                  <h2 className={style.projectTitle}>Fake Store <BsArrowRightShort /></h2>
                   <p>
                     I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. 
                     The site includes a search bar, a shopping cart, and a cart page, showcasing my skills in web development.
