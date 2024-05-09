@@ -206,7 +206,7 @@ export default function Work() {
                   <h2 className={style.projectTitle}>Iuri.ge <BsArrowRightShort /></h2>
                   <p>
                     &rdquo;Lawyer&apos;s Website: SEO-Optimized with Multilingual Support&quot;
-                    A lawyer&apos;s website designed for easy search engine discovery. Supports Russian, English, and Georgian languages, featuring email capabilities and streamlined functionality.
+                    A lawyer&apos;s website designed for easy search engine discovery. Supports English and Georgian languages, featuring email capabilities and streamlined functionality.
                   </p>
                 </div>
                 <div className={style.projectTools}>
