@@ -1,0 +1,98 @@
+.card {
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  color: black;
+  padding: 1.5rem;
+  background-color: white;
+  pointer-events: auto;
+  position: relative;
+  margin-left: 15%;
+  transform: scale(1);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  overflow: hidden;
+
+  &:nth-child(even) {
+    transform: translateY(8px);
+  }
+
+  &:nth-child(n) {
+    transform: rotate(-5deg);
+  }
+  .titleBack{
+    position: absolute;
+    bottom: 0%;
+    left: -120%;
+    width: 100%;
+    height: 35%;
+    transition: all .5s ease;
+    opacity: 0.9;
+  }
+  &:hover .titleBack{
+    left: 0;
+  }
+  .title{
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    outline: none;
+    width: 100%;
+    height: 30%;
+    left: -120%;
+    opacity: 0;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    bottom: 0%;
+    transition-delay: .2s;
+    font-size: 1em;
+    
+  }
+
+  &:hover .title{
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    left: -10%;
+  }
+}
+.card:nth-child(1),
+.card:nth-child(5),
+.card:nth-child(9),
+.card:nth-child(13) {
+  transition: opacity 350ms 1500ms, margin 350ms 1500ms, transform .3s ease-in-out;
+  z-index: 1;
+}
+
+.card:nth-child(2),
+.card:nth-child(6),
+.card:nth-child(10),
+.card:nth-child(14) {
+  transition: opacity 350ms 1550ms, margin 350ms 1550ms, transform .3s ease-in-out;
+  z-index: 2;
+}
+
+.card:nth-child(3),
+.card:nth-child(7),
+.card:nth-child(11),
+.card:nth-child(15) {
+  transition: opacity 350ms 1600ms, margin 350ms 1600ms, transform .3s ease-in-out;
+  z-index: 3;
+}
+
+.card:nth-child(4),
+.card:nth-child(8),
+.card:nth-child(12),
+.card:nth-child(16) {
+  transition: opacity 350ms 1650ms, margin 350ms 1650ms, transform .3s ease-in-out;
+  z-index: 4;
+}
+.card.active{
+  margin-left: 0;
+  opacity: 1;
+}

@@ -1,10 +1,9 @@
 "use client"
 import style from "./Navbar.module.scss"
-import logo from '/public/assets/image/logo-white.png'
 import Link from "next/link"
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 import { useState, useRef, useEffect } from "react"
-import Image from "next/image"
 
 export default function Navbar() {
   const [show, setShow] = useState(false)
@@ -65,25 +64,28 @@ useEffect(() => {
 
   return (
     <div className={style.navbar}>
+      <div className={style.inner}>
 
-      <div>
-        <Link href="/"><Image src={logo.src} width={450} height={100} alt="logo" /></Link>
-      </div>
+        <a href="#about" className={style.logo}>
+          <h3>Giorgi Machitadze</h3>
+        </a>
 
-      <div className={style.navigation}>
-        <Link className={activeSection === 'about' ? style.active : ''} href="#about">About</Link>
-        <Link className={activeSection === 'work' ? style.active : ''} href="#work">Work</Link>
-        <Link className={activeSection === 'contact' ? style.active : ''} href="#contact">Contact</Link>
-      </div>
-
-      <div className={style.navigationButton} onClick={handleShow}><GiHamburgerMenu /></div>
-      {show && 
-        <div className={style.navigationMenu} ref={menuRef}>
-          <Link className={activeSection === 'about' ? style.active : ''} onClick={handleShowOff} href="#about">About</Link>
-          <Link className={activeSection === 'work' ? style.active : ''} id={style.middleNavigation} onClick={handleShowOff} href="#work">Work</Link>
-          <Link className={activeSection === 'contact' ? style.active : ''} onClick={handleShowOff} href="#contact">Contact</Link>
+        <div className={style.navigation}>
+          <Link className={activeSection === 'about' ? style.active : ''} href="#about">About</Link>
+          <Link className={activeSection === 'work' ? style.active : ''} href="#work">Work</Link>
+          <Link className={activeSection === 'contact' ? style.active : ''} href="#contact">Contact</Link>
         </div>
-      }
+        <div className={style.responsiveContainer}>
+          <div className={style.navigationButton} onClick={handleShow}>{!show ? <GiHamburgerMenu /> : <IoClose />}</div>
+          
+          <div className={`${style.navigationMenu} ${show ? style.active : ''}`} ref={menuRef}>
+            <Link className={activeSection === 'about' ? style.active : ''} onClick={handleShowOff} href="#about">About</Link>
+            <Link className={activeSection === 'work' ? style.active : ''} onClick={handleShowOff} href="#work">Work</Link>
+            <Link className={activeSection === 'contact' ? style.active : ''} onClick={handleShowOff} href="#contact">Contact</Link>
+          </div>
+          
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,10 +1,13 @@
 import Navbar from '@/components/navbar/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from "next/font/google";
 import Footer from '@/components/footer/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin', 'cyrillic', 'cyrillic-ext' ,'greek', 'latin-ext']
+})
 
 export const metadata: Metadata = {
   title: 'Giorgi Machitadze - Portfolio',
@@ -19,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Navbar />  
         {children}
         <Footer />
