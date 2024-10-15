@@ -27,7 +27,7 @@ export default function Skills(props: Props) {
 
         <SkillCard title='Firebase' source="/assets/svg/firebase.png" backColor='orange'/>
         <SkillCard title='GraphQL' source="/assets/svg/graphql.png" backColor='deeppink'/>
-        <SkillCard title='Figma' source="/assets/svg/figma.png" backColor='purple'/>
+        <SkillCard title='Zustand' source="/assets/svg/zustand.png" backColor='purple'/>
         <SkillCard title='React Router' source="/assets/svg/react-router-dom.png" backColor='crimson'/>
       </div>
     </div>

@@ -19,6 +19,7 @@ interface Props {
   isNext?: boolean;
   isFirebase?: boolean;
   isGraphql?: boolean;
+  isZustand?: boolean;
 }
 
 export default function Project(props: Props) {
@@ -36,6 +37,7 @@ export default function Project(props: Props) {
     isNext,
     isFirebase,
     isGraphql,
+    isZustand,
   } = props;
 
   // animation of card
@@ -130,6 +132,13 @@ export default function Project(props: Props) {
                 backColor="deeppink"
                 title="GraphQL"
                 source="/assets/svg/graphql.png"
+              />
+            )}
+            {isZustand && (
+              <Tools
+                backColor="purple"
+                title="Zustand"
+                source="/assets/svg/zustand.png"
               />
             )}
           </div>

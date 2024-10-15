@@ -64,19 +64,6 @@ export default function Work() {
           isReact
         />
         <Project
-          imgSource="/assets/image/ecommerce.png"
-          title="Fake Store"
-          description="I created a fully functional e-commerce website, utilizing
-          the FakeStoreAPI for product data. The site includes a
-          search bar, a shopping cart, and a cart page, showcasing my
-          skills in web development."
-          href="https://giorgimachitadze-ecommerce.vercel.app/"
-          isSass
-          isNext
-          isTypescript
-          isReact
-        />
-        <Project
           imgSource="/assets/image/maze.png"
           title="The Maze"
           description='"The Maze" presents 10 levels of challenging mazes
@@ -89,6 +76,17 @@ export default function Work() {
           isTypescript
           isReact
           isFirebase
+        />
+        <Project
+          imgSource="/assets/image/ecommerce.png"
+          title="Fake Store"
+          description="I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. The site includes a search bar, sort logic, a shopping cart, a cart page, and a loading skeleton, showcasing my skills in web development."
+          href="https://giorgimachitadze-ecommerce.vercel.app/"
+          isSass
+          isNext
+          isTypescript
+          isReact
+          isZustand
         />
         <Project
           imgSource="/assets/image/iuritsereteli.png"
