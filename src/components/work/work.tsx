@@ -78,17 +78,6 @@ export default function Work() {
           isFirebase
         />
         <Project
-          imgSource="/assets/image/ecommerce.png"
-          title="Fake Store"
-          description="I created a fully functional e-commerce website, utilizing the FakeStoreAPI for product data. The site includes a search bar, sort logic, a shopping cart, a cart page, and a loading skeleton, showcasing my skills in web development."
-          href="https://giorgimachitadze-ecommerce.vercel.app/"
-          isSass
-          isNext
-          isTypescript
-          isReact
-          isZustand
-        />
-        <Project
           imgSource="/assets/image/iuritsereteli.png"
           title="Iuri.ge"
           description="&rdquo;Lawyer's Website: SEO-Optimized with
@@ -100,6 +89,18 @@ export default function Work() {
           isSass
           isTypescript
           isReact
+        />
+        <Project
+          imgSource="/assets/image/globalins.jpg"
+          title="Globalins.ge"
+          description="A professional website for a marine and cargo survey company, 
+          optimized for search engines and supporting English, Georgian, and Russian languages. 
+          It includes interactive Leaflet map integration, smooth advanced animations, 
+          and email functionality for seamless communication."
+          href="https://globalins.com/"
+          isNext
+          isSass
+          isTypescript
         />
       </div>
     </div>
