@@ -91,7 +91,7 @@ export default function Work() {
           isReact
         />
         <Project
-          imgSource="/assets/image/globalins.jpg"
+          imgSource="/assets/image/globalins.JPG"
           title="Globalins.ge"
           description="A professional website for a marine and cargo survey company, 
           optimized for search engines and supporting English, Georgian, and Russian languages. 
